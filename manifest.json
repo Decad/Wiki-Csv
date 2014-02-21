@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "wikicsv",
+  "description": "This extension allows wikipedia tables to be downloaded as CSV",
+  "version": "1.0",
+  "icons": {
+    "48": "wikicsv_48.png",
+    "128": "wikicsv_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.wikipedia.org/*"],
+      "js": ["jquery-1.10.1.min.js", "wikicsv.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
